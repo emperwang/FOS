@@ -1,30 +1,31 @@
 #include"console.h"
-
+#include "types.h"
 int kern_entry()
 {
     uint8_t *input = (uint8_t*)0xB8000;
-    uint8_t clor = (0<<4) | (15&0x0f);
+    uint8_t color = (0<<4) | (15&0x0f);
 
- /*   *input++ ='H';*inpuit++=color;
-    *input++ ='e';*inpuit++=color;
-    *input++ ='l';*inpuit++=color;
-    *input++ ='l';*inpuit++=color;
-    *input++ ='o';*inpuit++=color;
-    *input++ =',';*inpuit++=color;
-    *input++ ='o';*inpuit++=color;
-    *input++ ='s';*inpuit++=color;
-    *input++ =' ';*inpuit++=color;
-    *input++ ='k';*inpuit++=color;
-    *input++ ='e';*inpuit++=color;
-    *input++ ='r';*inpuit++=color;
-    *input++ ='n';*inpuit++=color;
-    *input++ ='e';*inpuit++=color;
-    *input++ ='l';*inpuit++=color;
-    *input++ ='!';*inpuit++=color;*/
+    *input++ ='H';*input++=color;
+    *input++ ='e';*input++=color;
+    *input++ ='l';*input++=color;
+    *input++ ='l';*input++=color;
+    *input++ ='o';*input++=color;
+    *input++ =',';*input++=color;
+    *input++ ='o';*input++=color;
+    *input++ ='s';*input++=color;
+    *input++ =' ';*input++=color;
+    *input++ ='k';*input++=color;
+    *input++ ='e';*input++=color;
+    *input++ ='r';*input++=color;
+    *input++ ='n';*input++=color;
+    *input++ ='e';*input++=color;
+    *input++ ='l';*input++=color;
+    *input++ ='!';*input++=color;
     
-    concole_clear();
+    console_clear();
 
-    console_write_color("hello,OS kernel!\n",rc_black,rc_green);
+    console_write_color("hello,OS kernel!",rc_black,rc_green);
 
+    console_write_dec(1000,rc_black,rc_red);
     return 0;
 }
