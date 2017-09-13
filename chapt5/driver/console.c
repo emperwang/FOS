@@ -85,7 +85,7 @@ void console_putc_color(char c,real_color_t back,real_color_t fore)
     else if(c >= ' ')
     {
         video_memory[cursor_y*80+cursor_x] = c|attribute;
-        cursor_x++
+        cursor_x++;
     }
 
     if(cursor_x >= 80)
@@ -112,7 +112,7 @@ void console_write_color(char* cstr,real_color_t back,real_color_t fore)
     while(*cstr)
     {
         console_putc_color(*cstr++,back,fore);
-    }_
+    }
 }
 
 void console_write_hex(uint32_t n,real_color_t back,real_color_t fore)

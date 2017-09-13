@@ -3,7 +3,7 @@
 int kern_entry()
 {
     uint8_t *input = (uint8_t*)0xB8000;
-    uint8_t clor = (0<<4) | (15&0x0f);
+    uint8_t color = (0<<4) | (15&0x0f);
 
  /*   *input++ ='H';*inpuit++=color;
     *input++ ='e';*inpuit++=color;
@@ -24,7 +24,7 @@ int kern_entry()
     
     concole_clear();
 
-    console_write_color("hello,OS kernel!\n",rc_black,rc_green);
+    console_write_color("hello,OS kernel!",rc_black,rc_green);
 
     return 0;
 }
